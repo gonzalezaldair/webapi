@@ -24,6 +24,7 @@ namespace webapi
             modelBuilder.Entity<Categoria>(categoria =>
             {
                 categoria.ToTable("Categoria");
+                
                 categoria.HasKey(p => p.CategoriaId);
 
                 categoria.Property(p => p.Nombre).IsRequired().HasMaxLength(150);

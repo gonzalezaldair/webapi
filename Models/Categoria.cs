@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace webapi.Models
 {
@@ -12,6 +13,7 @@ namespace webapi.Models
         public int Peso { get; set; }
 
         [JsonIgnore]
+        [ValidateNever]
         public virtual ICollection<Tarea> Tareas { get; set; }
     }
 
